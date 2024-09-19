@@ -247,7 +247,7 @@ To use this repo, follow the following steps:
 
 ### Alternative one
 open your terminal on your computer
-clone the repo by running the following command: git clone  **````**
+clone the repo by running the following command: git clone  **``git@github.com:Terry1703/phase3-project.git``**
 
 [Instructions to configure any settings or environment variables if necessary]
 
