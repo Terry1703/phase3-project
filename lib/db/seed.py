@@ -1,31 +1,29 @@
-from models import User,Base,Post
+from models import User, Post, Base
 from faker import Faker
-from sqlalchemy.orm import  sessionmaker
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
-#setup database
+# Setup database
+engine = create_engine('sqlite:///your_database_name.db')  # Make sure the path is correct
+Session = sessionmaker(bind=engine)
+session = Session()
 
-engine = create_engine('squlite:///your_database_name.db')
-session = sessionmaker(bind=engine)
-session = session()
-
-#initialize Faker
-
+# Initialize Faker
 fake = Faker()
 
-#generate fake data
-
+# Generate fake data
 def seed_data():
     for _ in range(10):
-        User =User(name=fake.name(), email=fake.email())
-        session.add(User)
-        session.commit()
+        user = User(name=fake.name(), email=fake.email())  # Create a new User instance
+        session.add(user)
+        session.commit()  # Commit after adding the user to get the user.id
         
         for _ in range(3):
-            post = post(title=fake.sesentence(), content=fake.text(), user_id=user.id)
-            session.add(post)
-        session.commit() 
-            
+            post = Post(title=fake.sentence(), content=fake.text(), user_id=user.id)  # Create a new Post instance
+            session.add(post)  # Add each post to the session
+        session.commit()  # Commit after adding all posts for the user
+
 if __name__ == "__main__":
-    seed_data()
-    print('Database seeded!')        
+    Base.metadata.create_all(engine)  # Ensure tables are created before seeding
+    seed_data()  # Seed the data
+    print('Database seeded!')
