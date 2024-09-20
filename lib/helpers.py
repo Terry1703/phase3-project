@@ -22,7 +22,7 @@ def function_4(x):
 
 def function_5(x):  
     """Perform some operation."""
-    return y + 10
+    return x + 10
 
 def function_6(z):
     """Another operation."""
