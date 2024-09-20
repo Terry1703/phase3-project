@@ -237,3 +237,23 @@ Happy coding!
 - [Setting up a respository - Atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 - [Create a repo- GitHub Docs](https://docs.github.com/en/get-started/quickstart/create-a-repo)
 - [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+
+# System Requirements
+
+-A Browser that can run JavaScript (Chrome, Firefox, etc) -Node 20+ -operating system (Windows 10+, Linux, etc) -RAM > 4GB -Disk space > 1GB
+
+### Installation
+To use this repo, follow the following steps:
+
+### Alternative one
+open your terminal on your computer
+clone the repo by running the following command: git clone  **``git@github.com:Terry1703/phase3-project.git``**
+
+[Instructions to configure any settings or environment variables if necessary]
+
+Execute the application:
+
+bash Copy code
+
+#### AUTHOR The project contributed to and maintained by: 
+Terry Otieno 
